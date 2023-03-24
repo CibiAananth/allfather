@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
+          <p className="underline">
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
@@ -28,7 +28,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              By
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"

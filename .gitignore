@@ -19,7 +19,6 @@
 .DS_Store
 *.pem
 /.history
-/.vscode
 
 # debug
 npm-debug.log*
