@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+/** @format */
 
-const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
+import styles from '@/styles/Home.module.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -53,7 +55,7 @@ export default function Home() {
               src="/thirteen.svg"
               alt="13"
               width={40}
-              height={31}
+              height={33}
               priority
             />
           </div>
@@ -83,6 +85,7 @@ export default function Home() {
             <h2 className={inter.className}>
               Learn <span>-&gt;</span>
             </h2>
+
             <p className={inter.className}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
             </p>
@@ -119,5 +122,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }
