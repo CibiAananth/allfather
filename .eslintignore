@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
 
 # testing
 /coverage
@@ -11,6 +12,7 @@
 # next.js
 /.next/
 /out/
+next.config.js
 
 # production
 /build
@@ -36,5 +38,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-**/*.css
-**/*.scss
+# misc
+tailwind.config.js
+postcss.config.js
+tsconfig.json
+.eslintrc.json
+.prettierrc.json
+

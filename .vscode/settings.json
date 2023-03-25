@@ -1,5 +1,25 @@
 {
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
-  "eslint.codeActionsOnSave.rules": null
+  "eslint.codeActionsOnSave.rules": null,
+
+  "eslint.validate": ["json", "jsonc"],
+  "stylelint.validate": ["css", "scss", "tailwindcss"],
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "stylelint.snippet": ["css", "less", "postcss", "tailwindcss"]
 }

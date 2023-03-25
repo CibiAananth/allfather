@@ -1,18 +1,47 @@
 {
+  "root": true,
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "next/core-web-vitals",
     "react-app",
     "react-app/jest",
-    "plugin:prettier/recommended"
+    "plugin:css/recommended",
+    "plugin:prettier/recommended",
+    "stylelint"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "parserOptions": {
-    "project": "./tsconfig.json" // path to your TypeScript configuration file
+    "project": "./tsconfig.eslint.json"
+  },
+  "plugins": ["@typescript-eslint", "import", "css", "prettier", "json-format"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "alias": {
+        "map": [["@", "./"]],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "json/sort-package-json": "standard",
+    "json/ignore-files": ["**/package-lock.json"],
+    "json/json-with-comments-files": ["**/tsconfig.json", ".vscode/**"]
   },
   "rules": {
+    "node/no-missing-import": "off", // to disable path alias errors
+
     "prettier/prettier": "error",
 
+    "import/no-unresolved": "error",
     "import/no-duplicates": "error",
     "import/no-extraneous-dependencies": "warn",
     "import/no-mutable-exports": "error",
