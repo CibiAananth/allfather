@@ -26,9 +26,7 @@ module.exports = {
     { value: 'wip', name: 'wip: Work in progress' },
     { value: 'release', name: 'release: Release commit' },
   ],
-  scopes: [
-    // { name: 'example scope' },
-  ],
+  scopes: [{ name: 'no-release' }],
   usePreparedCommit: true, // to re-use commit from ./.git/COMMIT_EDITMSG
   allowTicketNumber: true,
   isTicketNumberRequired: false,

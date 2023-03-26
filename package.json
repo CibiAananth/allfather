@@ -13,11 +13,6 @@
     "prepare": "husky install",
     "start": "next start"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    }
-  },
   "dependencies": {
     "@types/node": "18.15.7",
     "@types/react": "18.0.28",
