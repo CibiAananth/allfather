@@ -4,12 +4,19 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "cz": "cz",
     "dev": "next dev",
     "format:all": "prettier . --write --ignore-unknown --loglevel warn --ignore-path .gitignore --ignore-path .prettierignore",
     "lint": "next lint --fix",
     "lint:css": "stylelint . --fix --ignore-path .gitignore --ignore-path .stylelintignore",
+    "next-version": "node scripts/nextVersion.js",
     "prepare": "husky install",
     "start": "next start"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   },
   "dependencies": {
     "@types/node": "18.15.7",
@@ -23,7 +30,10 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "autoprefixer": "^10.4.14",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
@@ -35,6 +45,7 @@
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "2.8.7",
+    "semantic-release": "^21.0.0",
     "stylelint": "^15.3.0",
     "stylelint-config-standard": "^31.0.0",
     "stylelint-config-tailwindcss": "^0.0.7",

@@ -71,37 +71,6 @@
     "@typescript-eslint/no-use-before-define": "error",
 
     "no-dupe-class-members": "off",
-    "@typescript-eslint/no-dupe-class-members": "error",
-
-    "camelcase": "off",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        "selector": "default",
-        "format": ["camelCase", "PascalCase"]
-      },
-
-      {
-        "selector": "variable",
-        "format": ["camelCase", "UPPER_CASE"]
-      },
-      {
-        "selector": "parameter",
-        "format": ["camelCase", "PascalCase"],
-        "leadingUnderscore": "allow"
-      },
-
-      {
-        "selector": "memberLike",
-        "modifiers": ["private"],
-        "format": ["camelCase"],
-        "leadingUnderscore": "require"
-      },
-
-      {
-        "selector": "typeLike",
-        "format": ["PascalCase"]
-      }
-    ]
+    "@typescript-eslint/no-dupe-class-members": "error"
   }
 }

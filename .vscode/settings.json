@@ -21,5 +21,8 @@
       "source.fixAll.stylelint": true
     }
   },
-  "stylelint.snippet": ["css", "less", "postcss", "tailwindcss"]
+  "stylelint.snippet": ["css", "less", "postcss", "tailwindcss"],
+  "files.exclude": {
+    "**/.git": false
+  }
 }

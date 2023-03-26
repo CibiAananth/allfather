@@ -38,10 +38,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# scrips
+scripts/**
+deployment/**
+
 # misc
 tailwind.config.js
 postcss.config.js
 tsconfig.json
+commitlint.config.js
 .eslintrc.json
 .prettierrc.json
+.releaserc.js
+.cz.config.js
 
