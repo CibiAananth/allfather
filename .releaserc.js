@@ -38,7 +38,7 @@ const configReleaseNotesGenerator = {
 
 const config = {
   debug: true,
-  repositoryUrl: 'git@github.com:CibiAananth/infiviz-next.git',
+  repositoryUrl: 'git@github.com:CibiAananth/allfather.git',
   branches: [
     'main',
     {
