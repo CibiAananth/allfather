@@ -1,5 +1,6 @@
 /** @format */
 import Button from '@/components/Button';
+import { Dropdown } from 'ui';
 import Head from 'next/head';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main data-testid="main">
         <Button />
+        <Dropdown />
       </main>
     </>
   );
