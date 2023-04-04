@@ -1,6 +1,6 @@
 {
   "name": "allfather",
-  "version": "0.0.0",
+  "version": "1.0.0-ci.1",
   "private": true,
   "prettier": "prettier-config-custom",
   "workspaces": [
