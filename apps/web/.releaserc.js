@@ -39,6 +39,7 @@ const configReleaseNotesGenerator = {
 const config = {
   debug: true,
   repositoryUrl: 'git@github.com:CibiAananth/allfather.git',
+  commitPaths: ['apps/web'],
   branches: [
     'main',
     {
