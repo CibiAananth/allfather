@@ -1,4 +1,16 @@
+/** @format */
+
 module.exports = {
-  root: true,
-  extends: ["custom"],
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['@', './apps/web']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
+      },
+    },
+  },
 };

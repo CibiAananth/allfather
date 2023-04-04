@@ -1,4 +1,9 @@
+/** @format */
+
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["ui"],
+  transpilePackages: ['ui'],
+  eslint: {
+    dirs: ['./'],
+  },
 };
