@@ -14,9 +14,10 @@
     "lint:css": "turbo run lint:css",
     "format": "turbo run format",
     "commit": "./node_modules/cz-customizable/standalone.js",
-    "semantic-release": "semantic-release-plus"
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
+    "@qiwi/multi-semantic-release": "^6.5.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "commitlint": "^17.5.1",
@@ -28,7 +29,6 @@
     "prettier": "^2.8.7",
     "prettier-config-custom": "workspace:*",
     "semantic-release": "^21.0.1",
-    "semantic-release-plus": "^20.0.0",
     "spinnies": "^0.5.1",
     "stylelint": "^15.4.0",
     "stylelint-config-custom": "workspace:*",
