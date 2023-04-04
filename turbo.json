@@ -9,6 +9,12 @@
     "lint": {
       "outputs": []
     },
+    "lint:css": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
     "dev": {
       "cache": false
     }
