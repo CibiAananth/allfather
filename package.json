@@ -12,13 +12,20 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "lint:css": "turbo run lint:css",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    "commit": "./node_modules/cz-customizable/standalone.js"
   },
   "devDependencies": {
+    "commitlint": "^17.5.1",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "latest",
     "eslint-config-custom": "workspace:*",
+    "husky": "^8.0.3",
     "prettier": "^2.8.7",
     "prettier-config-custom": "workspace:*",
+    "semantic-release": "^21.0.1",
+    "spinnies": "^0.5.1",
     "stylelint": "^15.4.0",
     "stylelint-config-custom": "workspace:*",
     "turbo": "latest",
