@@ -1,4 +1,5 @@
-import * as React from "react";
+/** @format */
+
 export const Button = () => {
   return <button>Boop</button>;
 };
