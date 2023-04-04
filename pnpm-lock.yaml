@@ -107,6 +107,9 @@ importers:
       eslint-config-stylelint:
         specifier: ^18.0.0
         version: 18.0.0(eslint@8.36.0)
+      eslint-config-turbo:
+        specifier: latest
+        version: 1.8.6(eslint@8.36.0)
       eslint-import-resolver-alias:
         specifier: ^1.1.2
         version: 1.1.2(eslint-plugin-import@2.27.5)
@@ -3635,6 +3638,15 @@ packages:
       eslint-plugin-regexp: 1.14.0(eslint@8.36.0)
     dev: false
 
+  /eslint-config-turbo@1.8.6(eslint@8.36.0):
+    resolution: {integrity: sha512-LSMqrHmFeQcYRuBnzrzw+B2bJ3+o8wxPkRwfK0Y+SSLsq2F/niRJ2kqB8j4uOSCfxybHHpFEB2CgUpQiiyfeoQ==}
+    peerDependencies:
+      eslint: '>6.6.0'
+    dependencies:
+      eslint: 8.36.0
+      eslint-plugin-turbo: 1.8.6(eslint@8.36.0)
+    dev: false
+
   /eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.27.5):
     resolution: {integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==}
     engines: {node: '>= 4'}
@@ -3914,6 +3926,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: false
+
+  /eslint-plugin-turbo@1.8.6(eslint@8.36.0):
+    resolution: {integrity: sha512-LieXzur+4XtIsLst8GdupTMhvGn2ebFetG3AVErh2jHBy1EobPHbatjcdNZQMy5EsdG35axQVB8KFF3jo4u+OQ==}
+    peerDependencies:
+      eslint: '>6.6.0'
+    dependencies:
+      eslint: 8.36.0
     dev: false
 
   /eslint-scope@5.1.1:

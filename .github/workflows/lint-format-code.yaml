@@ -1,0 +1,48 @@
+# @format
+name: Lint-Format-Code
+on:
+  pull_request:
+    branches:
+      - next
+      - main
+      - master
+jobs:
+  Lint-Format-Code:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 19
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Print versions
+        run: |
+          git --version
+          node --version
+          npm --version
+      - name: Lint stylesheets
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        run: ./scripts/lint-stylesheets.sh
+      - name: Prettify code
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        run: ./scripts/pretty-code.sh
+      - name: Lint src
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        run: ./scripts/lint-src.sh

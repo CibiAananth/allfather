@@ -87,7 +87,7 @@ async function prettyCode() {
     id,
   });
   try {
-    await exec('npm run pretty:src');
+    await exec('pnpm run format');
     logger({ message: 'Pretty', level: 'success', id });
   } catch (error) {
     console.error(error.stdout);
@@ -108,7 +108,7 @@ async function lintCss() {
   });
 
   try {
-    await exec('npm run lint:css');
+    await exec('pnpm run lint:css');
     logger({ message: 'Suits up 💅', level: 'success', id });
   } catch (error) {
     console.error(error.stdout);
@@ -129,7 +129,7 @@ async function lintSrc() {
   });
 
   try {
-    await exec('npm run lint');
+    await exec('pnpm run lint');
     logger({ message: 'Bloody Sweet!', level: 'success', id });
   } catch (error) {
     console.error(error.stdout);

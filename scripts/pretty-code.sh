@@ -5,7 +5,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${PURPLE} Applying formatting to code...${NC}"
-npm run pretty:src
+pnpm run format
 if [ $? -ne 0 ]; then
     echo -e "${RED}🔴 Whoops, looks like we couldn't format the code!${NC}"
     exit 1

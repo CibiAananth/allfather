@@ -92,7 +92,7 @@ async function prettyCode() {
     level: 'info',
     id,
   });
-  const child = spawn('npm', ['run', 'pretty:src']);
+  const child = spawn('pnpm', ['run', 'format']);
   stdStream(child);
   await new Promise((resolve, reject) => {
     child.on('close', code => {
@@ -116,7 +116,7 @@ async function lintCss() {
     level: 'info',
     id,
   });
-  const child = spawn('npm', ['run', 'lint:css']);
+  const child = spawn('pnpm', ['run', 'lint:css']);
   stdStream(child);
   await new Promise((resolve, reject) => {
     child.on('close', code => {
@@ -137,7 +137,7 @@ async function lintSrc() {
     level: 'info',
     id,
   });
-  const child = spawn('npm', ['run', 'lint']);
+  const child = spawn('pnpm', ['run', 'lint']);
   stdStream(child);
   await new Promise((resolve, reject) => {
     child.on('close', code => {
