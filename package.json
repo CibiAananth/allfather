@@ -14,7 +14,7 @@
     "lint:css": "turbo run lint:css",
     "format": "turbo run format",
     "commit": "./node_modules/cz-customizable/standalone.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "multi-semantic-release"
   },
   "devDependencies": {
     "@qiwi/multi-semantic-release": "^6.5.1",

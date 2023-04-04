@@ -1,7 +1,7 @@
 /** @format */
 
 module.exports = {
-  ignorePackages: [],
+  ignorePrivate: false,
   deps: {
     bump: 'inherit',
   },

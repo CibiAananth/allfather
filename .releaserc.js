@@ -38,7 +38,7 @@ const configReleaseNotesGenerator = {
 
 const config = {
   debug: true,
-  ci: true,
+  ci: false,
   repositoryUrl: 'git@github.com:CibiAananth/allfather.git',
   branches: [
     'main',
@@ -68,7 +68,6 @@ const config = {
       prerelease: 'ci',
     },
   ],
-  tagFormat: '${version}',
   plugins: [
     ['@semantic-release/commit-analyzer', configCommitAnalyzer],
     ['@semantic-release/release-notes-generator', configReleaseNotesGenerator],
@@ -82,7 +81,6 @@ const config = {
       '@semantic-release/npm',
       {
         npmPublish: false,
-        tarballDir: '.next',
       },
     ],
     [
