@@ -37,8 +37,7 @@ const configReleaseNotesGenerator = {
 };
 
 const config = {
-  debug: true,
-  ci: false,
+  noCi: true,
   repositoryUrl: 'git@github.com:CibiAananth/allfather.git',
   branches: [
     'main',
@@ -74,7 +73,7 @@ const config = {
     [
       '@semantic-release/changelog',
       {
-        changelogFile: './CHANGELOG.md',
+        changelogFile: './docs/CHANGELOG.md',
       },
     ],
     [
@@ -86,7 +85,7 @@ const config = {
     [
       '@semantic-release/git',
       {
-        assets: ['VERSION', 'RELEASE', 'package.json', './CHANGELOG.md'],
+        assets: ['VERSION', 'RELEASE', 'package.json', './docs/CHANGELOG.md'],
         message:
           'release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },

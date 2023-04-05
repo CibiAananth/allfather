@@ -3,6 +3,6 @@
 module.exports = {
   ignorePrivate: false,
   deps: {
-    bump: 'inherit',
+    bump: 'ignore',
   },
 };

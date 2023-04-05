@@ -154,9 +154,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.6
         version: 18.0.7
-      eslint-config-custom:
-        specifier: workspace:*
-        version: link:../eslint-config-custom
       react:
         specifier: ^18.2.0
         version: 18.2.0
