@@ -1,0 +1,37 @@
+# @format
+name: Clean code
+on:
+  pull_request:
+    branches:
+      - next
+      - main
+      - master
+    types: [ready_for_review, synchronize, reopened]
+
+jobs:
+  Lint-Format-Code:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 16
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Print versions
+        run: |
+          git --version
+          node --version
+          pnpm --version
+      - name: Clean code
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        run: ./scripts/clean-code.sh
