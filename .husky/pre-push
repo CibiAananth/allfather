@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# uncomment the following line to run linting before pushing
+# node ./scripts/lint-code:exec
