@@ -8,7 +8,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        map: [['@', './apps/web']],
+        map: [['@', __dirname]],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
       },
     },
