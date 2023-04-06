@@ -5,7 +5,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${PURPLE} Checking Stylesheets for issues...${NC}"
-pn run lint:css
+pnpm run lint:css
 if [ $? -ne 0 ]; then
     echo -e "${RED}🔴 Yikes, we found some issues with styling!${NC}"
     exit 1

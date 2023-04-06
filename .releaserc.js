@@ -83,9 +83,16 @@ const config = {
       },
     ],
     [
+      '@semantic-release/exec',
+      {
+        prepareCmd: './pretty-code.sh',
+        execCwd: './scripts',
+      },
+    ],
+    [
       '@semantic-release/git',
       {
-        assets: ['VERSION', 'RELEASE', 'package.json', './docs/CHANGELOG.md'],
+        assets: ['package.json', './docs/CHANGELOG.md'],
         message:
           'release: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
