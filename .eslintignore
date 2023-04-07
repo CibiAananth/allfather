@@ -35,6 +35,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+next-additional.d.ts
 
 # scrips
 scripts/**
@@ -42,6 +43,7 @@ deployment/**
 
 # configs
 tailwind.config.ts
+tailwind.config.js
 postcss.config.js
 commitlint.config.js
 

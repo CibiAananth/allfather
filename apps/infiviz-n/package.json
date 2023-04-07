@@ -1,9 +1,9 @@
 {
-  "name": "infiviz",
-  "version": "1.0.0-ci.1",
+  "name": "infiviz-n",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3002",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --ignore-path .gitignore --ignore-path ../../.eslintignore",
@@ -16,22 +16,22 @@
     "@mantine/core": "^6.0.6",
     "@mantine/hooks": "^6.0.6",
     "@mantine/next": "^6.0.6",
-    "next": "^13.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@next/font": "^13.3.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "stylis-plugin-rtl": "^2.1.1",
-    "tailwindcss": "^3.3.1",
-    "ui": "workspace:*"
+    "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tsconfig": "workspace:*",
-    "typescript": "^4.5.3"
+    "tailwind-config-custom": "workspace:*",
+    "typescript": "latest"
   },
   "engines": {
     "node": ">=18.15.0"

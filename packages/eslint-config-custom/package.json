@@ -5,19 +5,23 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "eslint-config-next": "13.2.4",
+    "eslint-config-next": "latest",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-stylelint": "^18.0.0",
+    "eslint-config-turbo": "latest",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-css": "^0.7.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-config-turbo": "latest"
+    "eslint-plugin-simple-import-sort": "^10.0.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "volta": {
+    "node": "18.15.0"
   }
 }
