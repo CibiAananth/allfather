@@ -51,6 +51,48 @@ module.exports = {
 
     'prettier/prettier': 'error',
 
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin', // Node.js built-in modules
+          'external', // External modules from node_modules
+          'internal', // Internal modules from project
+          'parent', // Parent modules
+          'sibling', // Sibling modules
+          'index', // Index files
+        ],
+        pathGroups: [
+          {
+            pattern: 'react/**', // all react modules
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: 'next/**', // all react modules
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: '@types/**', // all type definitions
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: 'components/**', // all components
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+        'newlines-between': 'always',
+        pathGroupsExcludedImportTypes: ['internal'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+
     'import/no-unresolved': 'error',
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'warn',
