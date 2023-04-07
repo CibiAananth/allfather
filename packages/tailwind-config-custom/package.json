@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "private": true,
+  "scripts": {
+    "format": "prettier . --write --ignore-unknown --loglevel warn --ignore-path .gitignore --ignore-path .prettierignore"
+  },
   "devDependencies": {
     "@types/node": "^17.0.12",
     "tailwindcss": "^3.3.1"

@@ -1,6 +1,6 @@
 /** @format */
 
-import { EmotionCache, createEmotionCache } from '@mantine/core';
+import { createEmotionCache, EmotionCache } from '@mantine/core';
 
 let cache: EmotionCache | undefined;
 

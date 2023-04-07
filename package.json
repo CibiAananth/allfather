@@ -49,5 +49,8 @@
   },
   "publishConfig": {
     "access": "restricted"
+  },
+  "dependencies": {
+    "dprint": "^0.35.3"
   }
 }

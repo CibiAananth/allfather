@@ -1,0 +1,33 @@
+{
+  "includes": ["**/*.{ts,tsx,js,jsx,json}"],
+  "excludes": [
+    "**/node_modules/**",
+    "**/node_modules",
+    ".history",
+    ".husky",
+    ".vercel",
+    ".vscode",
+    ".github",
+    "**/*-lock.json",
+    "**/*turbo.json"
+  ],
+  "json": {},
+  "markdown": {},
+  "dockerfile": {},
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "all",
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "arrowParens": "avoid",
+    "insertPragma": true
+  },
+  "plugins": [
+    "https://plugins.dprint.dev/prettier-0.24.0.json@9a57d0d8e440ad90d07a503166af47e7a6a886abd46767933f9c279f72468596",
+    "https://plugins.dprint.dev/json-0.17.1.wasm",
+    "https://plugins.dprint.dev/markdown-0.15.2.wasm",
+    "https://plugins.dprint.dev/dockerfile-0.3.0.wasm"
+  ]
+}

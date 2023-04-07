@@ -55,7 +55,6 @@ function stdStream(child) {
 }
 
 /**
- *
  * @param {Object} payload
  * @param {String} payload.message
  * @param {String} payload.level
@@ -70,7 +69,6 @@ function stdStream(child) {
  *    level: 'info',
  *    id: 'pretty-code',
  * });
- *
  */
 function logger({ message, level, id }) {
   if (level === 'info') {

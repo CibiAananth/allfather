@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "format": "prettier . --write --ignore-unknown --loglevel warn --ignore-path .gitignore --ignore-path .prettierignore"
+  },
   "dependencies": {},
   "publishConfig": {
     "access": "public"
