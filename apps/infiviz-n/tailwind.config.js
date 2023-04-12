@@ -7,11 +7,13 @@ const sharedConfig = require('tailwind-config-custom');
 
 module.exports = {
   presets: [sharedConfig],
+  important: '#app',
+  prefix: 'tw-inz-',
   darkMode: 'class', // or 'media'
   theme: {
     extend: {
       colors: {
-        primary: '#1e88e5',
+        primary: '#323',
         secondary: '#f50057',
         success: '#43a047',
         info: '#2196f3',

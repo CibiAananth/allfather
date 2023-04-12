@@ -52,6 +52,8 @@ module.exports = {
     'node/no-missing-import': 'off', // to disable path alias errors
     'node/no-unpublished-import': 'off', // to disable no unpublished errors
 
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
     'react/react-in-jsx-scope': 'off', // to disable react import errors
 
     'prettier/prettier': 'error',

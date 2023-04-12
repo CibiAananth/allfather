@@ -8,7 +8,7 @@ export const emotionCache = (key = 'mantine') => {
   if (!cache) {
     cache = createEmotionCache({
       key,
-      prepend: false,
+      prepend: true,
     });
   }
 

@@ -1,13 +1,15 @@
 /** @format */
 
+import './globals.css';
+
+// react imports
 import { ReactNode } from 'react';
 
-import { MantineProvider } from '@mantine/core';
+// next imports
 import type { Metadata } from 'next';
 
-import { emotionCache } from '@/utilities/cache';
-
-import './page';
+// local imports
+import RootStyleRegistry from './emotion';
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -20,14 +22,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      emotionCache={emotionCache()}
-    >
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    </MantineProvider>
+    <html lang="en">
+      <body id="app">
+        <RootStyleRegistry>{children}</RootStyleRegistry>
+      </body>
+    </html>
   );
 }
