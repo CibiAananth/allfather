@@ -2,7 +2,6 @@
  * @format
  * @type {import('tailwindcss').Config}
  */
-
 const sharedConfig = require('tailwind-config-custom');
 
 module.exports = {
