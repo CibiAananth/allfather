@@ -2,6 +2,9 @@
   "name": "tsconfig",
   "version": "1.0.0-ci.1",
   "private": true,
+  "scripts": {
+    "format": "prettier . --write --ignore-unknown --loglevel warn --ignore-path .gitignore --ignore-path .prettierignore"
+  },
   "files": [
     "base.json",
     "nextjs.json",

@@ -49,7 +49,6 @@ const GREEN = '\x1b[32m';
 const NC = '\x1b[0m';
 
 /**
- *
  * @param {Object} payload
  * @param {String} payload.message
  * @param {String} payload.level
@@ -64,7 +63,6 @@ const NC = '\x1b[0m';
  *    level: 'info',
  *    id: 'pretty-code',
  * });
- *
  */
 function logger({ message, level, id }) {
   if (level === 'info') {

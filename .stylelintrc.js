@@ -1,5 +1,5 @@
 /** @format */
 
 module.exports = {
-  extends: ["stylelint-config-custom"],
+  extends: ['stylelint-config-custom'],
 };

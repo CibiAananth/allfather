@@ -10,10 +10,10 @@ module.exports = {
   extends: [
     'turbo',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'next/core-web-vitals',
     'react-app',
     'react-app/jest',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
     'plugin:css/recommended',
     'plugin:prettier/recommended',
     'stylelint',
@@ -23,6 +23,9 @@ module.exports = {
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    react: {
+      version: 'detect',
     },
     'import/resolver': {
       node: {
@@ -49,9 +52,18 @@ module.exports = {
     'node/no-missing-import': 'off', // to disable path alias errors
     'node/no-unpublished-import': 'off', // to disable no unpublished errors
 
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    'react/react-in-jsx-scope': 'off', // to disable react import errors
+
     'prettier/prettier': 'error',
 
     'import/no-unresolved': 'error',
+    'import/extensions': [
+      'error',
+      'always',
+      { ts: 'never', tsx: 'never', js: 'ignorePackages' },
+    ],
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': 'warn',
     'import/no-mutable-exports': 'error',

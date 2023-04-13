@@ -1,14 +1,13 @@
 {
-  "name": "prettier-config-custom",
-  "private": true,
+  "name": "tailwind-config-custom",
   "version": "0.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "format": "prettier . --write --ignore-unknown --loglevel warn --ignore-path .gitignore --ignore-path .prettierignore"
   },
-  "dependencies": {},
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "tailwindcss": "^3.3.1"
   }
 }
