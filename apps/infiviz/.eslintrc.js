@@ -18,4 +18,30 @@ module.exports = {
       },
     },
   },
+  plugins: ['simple-import-sort'],
+  rules: {
+    'sort-imports': 'off',
+
+    'simple-import-sort/imports': [
+      'error',
+      {
+        groups: [
+          ['./*.(css|scss|less)'],
+          // ['@/(styles|theme)'],
+          ['@/(styles|theme)(/.*|$)'],
+          ['^react(-|$)'],
+          ['(next|@next)(-|$|/)'],
+          ['^@?\\w'],
+          [
+            '^@/(utils|services|hooks|hoc|types|contexts|dictionary|components|db|utilities|styles)(/.*|$)',
+          ],
+          // ['^@/services/'],
+          // ['^@/db/'],
+          // ['^@/utilities/'],
+          ['^@/'],
+          ['^\\.'],
+        ],
+      },
+    ],
+  },
 };

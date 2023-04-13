@@ -1,9 +1,14 @@
-/** @format */
+/**
+ * @format
+ * @type {import('next').NextConfig}
+ */
 
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ['ui'],
-  eslint: {
-    dirs: ['./'],
+  experimental: {
+    appDir: true,
+    serverComponentsExternalPackages: ['ui'],
   },
 };
+
+module.exports = nextConfig;

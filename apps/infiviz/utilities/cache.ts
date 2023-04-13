@@ -1,10 +1,16 @@
 /** @format */
 
-// rtl-cache.ts
-import { createEmotionCache } from '@mantine/core';
-import rtlPlugin from 'stylis-plugin-rtl';
+import { createEmotionCache, EmotionCache } from '@mantine/core';
 
-export const rtlCache = createEmotionCache({
-  key: 'mantine-rtl',
-  stylisPlugins: [rtlPlugin],
-});
+let cache: EmotionCache | undefined;
+
+export const emotionCache = (key = 'mantine') => {
+  if (!cache) {
+    cache = createEmotionCache({
+      key,
+      prepend: false,
+    });
+  }
+
+  return cache;
+};
