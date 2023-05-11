@@ -31,12 +31,7 @@ export default function RootStyleRegistry({ children }: RootLayoutProps) {
 
   return (
     <CacheProvider value={cache}>
-      <MantineProvider
-        emotionCache={cache}
-        withCSSVariables
-        withGlobalStyles
-        withNormalizeCSS
-      >
+      <MantineProvider emotionCache={cache} withCSSVariables withGlobalStyles>
         {children}
       </MantineProvider>
     </CacheProvider>

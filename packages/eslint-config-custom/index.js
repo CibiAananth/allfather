@@ -47,7 +47,7 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.js', '**/*.json'],
   rules: {
     'node/no-missing-import': 'off', // to disable path alias errors
     'node/no-unpublished-import': 'off', // to disable no unpublished errors
